@@ -1,0 +1,19 @@
+{
+  "name": "@repo/db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports":{
+    "./client":"./src/index.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "prisma": "^7.8.0"
+  }
+}
