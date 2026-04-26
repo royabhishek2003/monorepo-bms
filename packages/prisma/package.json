@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "exports":{
-    "./client":"./src/index.ts"
+  "exports": {
+    "./client": "./src/index.ts"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/pg": "^8.11.0"
   },
   "type": "commonjs",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "pg": "^8.13.0",
     "prisma": "^7.8.0"
   }
 }
