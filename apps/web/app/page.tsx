@@ -4,7 +4,9 @@ export const dynamic = 'force-dynamic';
 
 export default async function Home() {
 
-  const user = await client.user.findFirst();
+  const user = await client.user.findFirst({
+    orderBy: { createdAt: 'desc' },
+  });
   return (
     <>
       <h1>Home</h1>

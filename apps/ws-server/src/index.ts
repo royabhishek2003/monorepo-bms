@@ -7,6 +7,13 @@ import { client } from "@repo/db/client";
 
 const server = new WebSocketServer({ port: 8080 });
 
+// Determine credentials based on NODE_ENV
+const isProduction = process.env.NODE_ENV === "production";
+const WS_USERNAME = isProduction ? "prod1" : "stage1";
+const WS_PASSWORD = isProduction ? "prod1pass" : "stage1pass";
+
+console.log(`Running in ${isProduction ? "production" : "staging"} mode`);
+
 server.on("connection", async (socket: WebSocket) => {
   console.log("Client connected");
 
@@ -15,8 +22,8 @@ server.on("connection", async (socket: WebSocket) => {
 
     const res = await client.user.create({
       data: {
-        username: "test",
-        password: "test"
+        username: WS_USERNAME,
+        password: WS_PASSWORD
       }
     });
 
