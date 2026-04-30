@@ -11,14 +11,14 @@
   "author": "",
   "license": "ISC",
   "exports": {
-    "./client": "./src/index.ts"
+    "./client": "./dist/index.js"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
     "@types/pg": "^8.11.0"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
