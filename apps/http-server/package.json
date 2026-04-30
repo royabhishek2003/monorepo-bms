@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@repo/db": "workspace:*",
