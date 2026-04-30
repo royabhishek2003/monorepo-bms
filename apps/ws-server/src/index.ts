@@ -17,7 +17,7 @@ server.on("connection", async (socket: WebSocket) => {
       }
     });
 
-    console.log("After DB call"); // 👈 will this print?
+    console.log("After DB call");
     console.log("DB RESPONSE:", res);
 
   } catch (error) {
